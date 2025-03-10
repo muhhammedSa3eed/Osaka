@@ -1,0 +1,156 @@
+/* Global Styles */
+:root {
+  --main-color: #ff206e;
+  --main-duration: 0.4s;
+  --card-color: #212529;
+}
+html {
+  scroll-padding-top: 56px;
+}
+a {
+  color: inherit;
+  transition: color var(--main-duration);
+}
+
+/* Utility Classes */
+.bg-card {
+  background-color: var(--card-color);
+}
+.text-main {
+  color: var(--main-color);
+}
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+.isolate {
+  isolation: isolate;
+}
+.bg-light-dotted {
+  background-image: url("../images/light_dot.jpg");
+}
+.bg-dark-dotted {
+  background-image: url("../images/dark_dot.jpg");
+}
+.w-90px {
+  width: 90px;
+}
+.w-70px {
+  width: 70px;
+}
+.h-70px {
+  height: 70px;
+}
+.w-40px {
+  width: 40px;
+}
+.h-40px {
+  height: 40px;
+}
+.w-10px {
+  width: 10px !important;
+}
+.h-10px {
+  height: 10px !important;
+}
+.fs-14px {
+  font-size: 0.875rem;
+}
+.fs-16px {
+  font-size: 1rem;
+}
+.line-height {
+  line-height: 1.7;
+}
+.bg-footer {
+  background-color: #212529;
+}
+
+/* Start Navbar */
+.navbar-nav .nav-link.active {
+  color: var(--main-color);
+}
+/* End Navbar */
+
+/* Start Header*/
+header .container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header .container .content a:hover{
+  color: #ae0742;
+}
+header ul li {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(128, 128, 128, 0.425);
+  transition: border-color var(--main-duration), scale var(--main-duration),
+    rotate var(--main-duration);
+}
+header ul li:hover {
+  border-color: white;
+  scale: 1.1;
+  rotate: 10deg;
+}
+header ul li:hover i {
+  color: var(--main-color);
+}
+/* End Header*/
+/* Start Services */
+.services .row .service-card h5::before {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: 60px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width var(--main-duration);
+}
+.services .row .service-card:hover h5::before {
+  width: 80px;
+}
+.services .service-card .service-icon i {
+  transition: color var(--main-duration);
+}
+.services .row .service-card:hover .service-icon i {
+  color: var(--main-color) !important;
+}
+.services .service-card {
+  transition: scale var(--main-duration);
+}
+.services .service-card:hover {
+ scale: 1.05;
+}
+/* End Services */
+/* Start Portfolio */
+.portfolio .row .inner .layer {
+  width: 85%;
+  height: 0%;
+  transition: height var(--main-duration);
+}
+.portfolio .row .inner:hover .layer {
+  height: 90%;
+}
+.portfolio .row .inner:hover .layer .icons {
+  bottom: 50% !important;
+  transform: translateY(50%);
+}
+/* End Portfolio */
+/* Start Price */
+.container .carousel-item .price-value p {
+  top: 20px !important;
+  left: 135px;
+  width: 90%;
+  transform: rotate(35deg);
+}
+/* End Price */
+/* Start Blog */
+.blog .card-body .icon {
+  right: 30px;
+}
+.blog .card-body .icon:hover {
+  cursor: pointer;
+}
+/* End Blog */
